@@ -1,9 +1,9 @@
-FROM ghcr.io/graalvm/native-image:latest
+FROM ghcr.io/graalvm/native-image:ol8-java11-22.3.1
 
 WORKDIR /tmp/dist
 ADD ./output/lambda-graalvm-1.0-SNAPSHOT.jar ./app.jar
 RUN $JAVA_HOME/bin/native-image -jar ./app.jar --verbose --no-fallback
-RUN  microdnf install zip
+RUN microdnf install zip
 
 ADD bootstrap bootstrap
 

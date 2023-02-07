@@ -58,3 +58,9 @@ platform/logs/
 
 
 config-files-list.txt
+
+# Build Output:
+*.dll
+*.zip
+go-lambda/output
+dotnet-lambda/output
